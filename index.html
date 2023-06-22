@@ -3,8 +3,11 @@
 <head>
   <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
-  <title>Shorter URL</title>
+  <link rel="stylesheet" href="https://jsdelivr.quickso.cn/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+  <title>知链短链</title>
+  <META NAME="Description"
+    CONTENT="知链短链为您提供：短网址程序,短网址服务,短网址转换,短网址API接口,批量生成短链接,短网址生成,压缩所有网址包括图片、flash、mp3、rar等所有互联网地址，专业的网址缩短网站！。" />
+  <META NAME="Keywords" CONTENT="网址缩短,缩短网址,网址压缩,短链接,短域名,短网址,短网址生成" />
   <style>
     * {
       margin: 0;
@@ -65,45 +68,124 @@
         background-color: #252d38;
       }
     } 
+    #nav li {
+      float: left;
+    }
+
+    #nav li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding-top: 4px;
+      display: block;
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      font-family: "黑体";
+      font-size: 14px;
+      background-color: #007bff;
+      margin-left: 4px;
+      margin-top: 4px;
+    }
+
+    #nav li a:hover {
+      background-color: #ffffff;
+      color: #007bff;
+    }
+
+    .logo {
+      text-align: center;
+      padding-top: 10px;
+      position: absolute;
+      top: 20px;
+    }
+
+    .dark-mode {
+      background-color: #171b26;
+      color: white;
+    }
+
+    .footer {
+      display: block;
+      position: relative;
+      top: 60px;
+      width: 100%;
+      text-align: center;
+    }
   </style>
+    <!-- 网站统计 -->
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({ id: "JEZekeQjp8ZosPsn", ck: "JEZekeQjp8ZosPsn" })</script>
 </head>
 <body>
+  <div class="logo">
+    <img src="https://jsdelivr.quickso.cn/gh/muzihuaner/huancdn@main/img/zhiurllogo.png" width="126px"
+            height="60px" /></div>
   <div class="card">
+    
     <h5 class="card-header">🎁 Shorten your URLs !</h5>
     <div class="card-body">
-      <h5 class="card-title">Please enter the long URL to be shortened :</h5>
+      <h5 class="card-title">请输入你的长链接 :</h5>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Example: https://example.com/" id="text">
+        <input type="text" class="form-control" placeholder="举个栗子🌰: https://example.com/" id="text">
         <div class="input-group-append">
-          <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">Shorten it</button>
+          <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">缩它！</button>
         </div>
       </div>    
       <div class="card-text">
-        <a href="https://github.com/xyTom/Url-Shorten-Worker/" target="_self">Fork me on GitHub</a>
+        <!-- <a href="https://github.com/xyTom/Url-Shorten-Worker/" target="_self">Fork me on GitHub</a> -->
+      <!-- 实现横向导航菜单 -->
+      <div id="nav">
+        <ul style="list-style-type: none;">
+          <li><a href="https://huangetech.gitee.io/pay/">赞助我们</a></li>
+          <li><a target="_blank"
+              href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=muzihuaner@qq.com">恶意网站举报</a></li>
+          <li><a href="https://url-shorten-worker.pages.dev/api.html">API</a></li>
+          <li><a href="https://quickso.cn">快点搜</a></li>
+          <li><a onclick="myFunction()">夜间模式</a></li>
+          <li><a href="https://url-shorten-worker.pages.dev/tos">使用条款</a></li>
+          </a></li>
+      <li><a href="https://jsdelivr.quickso.cn/gh/muzihuaner/Url-Shorten-Worker@main/app/app-release.apk">APP</a></li>
+          </a></li>
+        </ul>
+      </div>
+    </div>
       </div>
       <p id="notice"></p>             
     </div>
+  </div>
+  <div class="footer">
+    <p>2023© <a href="https://zhiurl.cn/"><strong>知链短链</strong></a> × <a rel="nofollow" target="_blank"
+        href="https://huangetech.github.io">欢哥科技</a></p>
+        <p>本站禁止违法违规内容的网站生成短链接，如有发现立刻封停！<br>为了防止滥用，故所有由知链短链生成的链接将会不定期清理。</p>
+
   </div>
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Result</h5>
+          <h5 class="modal-title" id="exampleModalLabel">结果</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" id="result">No result</div>
+        <div class="modal-body" id="result">无结果</div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">复制</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
         </div>
       </div>
     </div>
   </div>         
-  <script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-  <script src="https://gcore.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://gcore.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
-  <script src="https://gcore.jsdelivr.net/npm/url-shorten-worker@1.0.7/main.js" crossorigin="anonymous"></script>
+  <!--夜间模式-->
+  <script>
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+  <script src="https://jsdelivr.quickso.cn/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.quickso.cn/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.quickso.cn/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.quickso.cn/npm/url-shorten-worker@1.0.7/main.js" crossorigin="anonymous"></script>
 </body>
 </html>
