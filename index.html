@@ -8,6 +8,22 @@
   <META NAME="Description"
     CONTENT="知链短链为您提供：短网址程序,短网址服务,短网址转换,短网址API接口,批量生成短链接,短网址生成,压缩所有网址包括图片、flash、mp3、rar等所有互联网地址，专业的网址缩短网站！。" />
   <META NAME="Keywords" CONTENT="网址缩短,缩短网址,网址压缩,短链接,短域名,短网址,短网址生成" />
+  <script>
+    // 跳转提示
+    if (is_weixn_qq()) {;
+    window.location.href = 'https://c.pc.qq.com/middle.html?pfurl='+window.location.href; 
+    }
+    function is_weixn_qq(){
+    // 判断当前是否微信/QQ浏览器
+    var ua = navigator.userAgent;
+    var isWeixin = !!/MicroMessenger/i.test(ua);
+    var isQQ = !!/QQ\//i.test(ua);
+    if(isWeixin||isQQ){
+    return true;
+    }
+    return false;
+    }
+    </script>
   <style>
     * {
       margin: 0;
@@ -144,8 +160,8 @@
           <li><a onclick="myFunction()">夜间模式</a></li>
           <li><a href="https://url-shorten-worker.pages.dev/tos">使用条款</a></li>
           </a></li>
-      <li><a href="https://jsdelivr.quickso.cn/gh/muzihuaner/Url-Shorten-Worker@main/app/app-release.apk">APP</a></li>
-          </a></li>
+      <!-- <li><a href="https://jsdelivr.quickso.cn/gh/muzihuaner/Url-Shorten-Worker@main/app/app-release.apk">APP</a></li>
+          </a></li> -->
         </ul>
       </div>
     </div>
